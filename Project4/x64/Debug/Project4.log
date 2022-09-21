@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\User\Documents\GitHub\programingCJU101-2022\Project4\main.cpp(10,24): error C2065: '$weight': 선언되지 않은 식별자입니다.
+C:\Users\User\Documents\GitHub\programingCJU101-2022\Project4\main.cpp(10,33): error C2065: '$cmhight': 선언되지 않은 식별자입니다.
+C:\Users\User\Documents\GitHub\programingCJU101-2022\Project4\main.cpp(12,2): error C2065: 'cm': 선언되지 않은 식별자입니다.
+C:\Users\User\Documents\GitHub\programingCJU101-2022\Project4\main.cpp(14,53): error C2143: 구문 오류: ';'이(가) 'else' 앞에 없습니다.
