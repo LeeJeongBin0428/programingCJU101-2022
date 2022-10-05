@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "18e4a8ec-4b82-4f0a-8307-08dbfb94a900": {
+      "ProjectGuid": "18e4a8ec-4b82-4f0a-8307-08dbfb94a900",
+      "DisplayName": "사칙연상프로그램",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
