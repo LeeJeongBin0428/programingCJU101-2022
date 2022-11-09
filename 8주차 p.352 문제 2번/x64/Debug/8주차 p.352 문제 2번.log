@@ -1,0 +1,4 @@
+﻿  소스.cpp
+C:\Users\User\Documents\GitHub\programingCJU101-2022\8주차 p.352 문제 2번\소스.cpp(11,10): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\User\Documents\GitHub\programingCJU101-2022\8주차 p.352 문제 2번\소스.cpp(11,10): message : 서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  8주차 p.352 문제 2번.vcxproj -> C:\Users\User\Documents\GitHub\programingCJU101-2022\8주차 p.352 문제 2번\x64\Debug\8주차 p.352 문제 2번.exe
