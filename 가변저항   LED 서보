@@ -1,0 +1,84 @@
+#include <Servo.h>
+
+#define MINANALOG 0
+#define MAXANALOG 1023
+#define MINDELAY 0
+#define MAXDELAY 100
+
+int nRedPin = 2;
+int nBluePin =3;
+int nGreenPin =4;
+int nYellowPin =5;
+int nPushSwPin =6;
+int nPotenPin =A0;
+int nDelay = 50;
+
+void GenLEDDigitalOutput(int nNumPin, int nCmd, int nDelay)
+{
+  digitalWrite(nNumPin, nCmd);
+  delay(nDelay);
+}
+void GenLEDAnalogOutput(int nNumPin, int nCmd, int nDelay)
+{
+  analogWrite(nNumPin, nCmd);
+  delay(nDelay);
+}  
+
+void setup()
+{
+  
+  pinMode(nRedPin,OUTPUT);
+  pinMode(nBluePin,OUTPUT);
+  pinMode(nGreenPin,OUTPUT);
+  pinMode(nYellowPin,OUTPUT);
+  pinMode(nPushSwPin,INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  
+int nKnobDelay = analogRead(nPotenPin);
+  nKnobDelay = map(nKnobDelay, MINANALOG, MAXANALOG, MINDELAY, MAXDELAY);
+  Serial.println(nKnobDelay);
+ if(digitalRead(nPushSwPin) ==HIGH)
+ {
+   Serial.print("Switch:ON\n");
+   
+   analogWrite(nRedPin, 255);
+   delay(nKnobDelay);
+   analogWrite(nRedPin,LOW);
+   delay(nKnobDelay);
+   
+   analogWrite(nBluePin, 255);
+   delay(nKnobDelay);
+   analogWrite(nBluePin,LOW);
+   delay(nKnobDelay);
+   
+   
+   analogWrite(nGreenPin, 255);
+   delay(nKnobDelay);
+   analogWrite(nGreenPin,LOW);
+   delay(nKnobDelay);
+   
+   
+   analogWrite(nYellowPin, 255);
+   delay(nKnobDelay);
+   analogWrite(nYellowPin,LOW);
+   delay(nKnobDelay);
+   
+   
+
+ }
+  else
+  {
+    Serial.print("Switch:OFF\n");
+    digitalWrite(nRedPin, LOW);
+    digitalWrite(nBluePin, LOW);
+    digitalWrite(nGreenPin, LOW);
+    digitalWrite(nYellowPin, LOW);
+  }
+  delay(nDelay);
+ 
+           
+}
