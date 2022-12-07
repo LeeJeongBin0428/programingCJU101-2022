@@ -1,0 +1,20 @@
+// C++ code
+//
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  pinMode(9, OUTPUT);
+}
+ 
+void loop()
+{
+  int value = analogRead(A0);
+  Serial.println(value);
+  
+  //map(값을 가지고 있는 변수, 최소, 최대, 변환최소, 변환최대)
+  int ch_value = map(value, 0, 1023, 0, 255);//원하는 값으로 변경
+  
+  analogWrite(9,ch_value);
+  
+}
